@@ -1652,6 +1652,13 @@ function displayNearbyBusinesses() {
 
 
 
+fetch("https://raw.githubusercontent.com/Hafsa157/house/main/Food_Hygiene_Ratings.geojson")
+    .then(response => response.json())
+    .then(data => {
+        localStorage.setItem("geojsonData", JSON.stringify(data));
+        populateList(data);
+    })
+    .catch(error => console.error("❌ Error loading GeoJSON:", error));
 
 
 
