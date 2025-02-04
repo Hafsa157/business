@@ -72,7 +72,7 @@ function addZeroRatedMarkers(data) {
 
 // Load the initial data to populate the map
 function loadGeoJSONData() {
-   Food_Hygiene_Ratings.json)  // Ensure the correct path to the GeoJSON file
+  (Food_Hygiene_Ratings.geojson)  // Ensure the correct path to the GeoJSON file
         .then(response => response.json())
         .then(data => {
             originalData = data;  // Save original data
